@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TrainerPageComponent } from './trainer-page.component';
+import { PokemonCataloguePages } from './pokemon-catalogue.pages';
 
-describe('TrainerPageComponent', () => {
-  let component: TrainerPageComponent;
-  let fixture: ComponentFixture<TrainerPageComponent>;
+describe('PokemonCataloguePages', () => {
+  let component: PokemonCataloguePages;
+  let fixture: ComponentFixture<PokemonCataloguePages>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TrainerPageComponent ]
+      declarations: [ PokemonCataloguePages ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(TrainerPageComponent);
+    fixture = TestBed.createComponent(PokemonCataloguePages);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
