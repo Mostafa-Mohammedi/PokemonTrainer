@@ -10,6 +10,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
 import { PokemonListItemComponent } from './components/pokemon-list-item/pokemon-list-item.component';
 import { PokemonButtonComponent } from './components/pokemon-button/pokemon-button.component';
+import { TrainerPagePages } from './pages/trainer-page/trainer-page.pages';
+import { PokemonCataloguePages } from './pages/pokemon-catalogue/pokemon-catalogue.pages';
+import { LandingPagePages } from './pages/landing-page/landing-page.pages';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { PokemonButtonComponent } from './components/pokemon-button/pokemon-butt
     NavbarComponent,
     PokemonListComponent,
     PokemonListItemComponent,
-    PokemonButtonComponent
+    PokemonButtonComponent,
+    TrainerPagePages,
+    PokemonCataloguePages,
+    LandingPagePages
   ],
   imports: [
     BrowserModule
