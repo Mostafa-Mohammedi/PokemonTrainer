@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { StorageUtil } from 'src/utils/storage.utils';
+import { StorageKeys } from '../enum/storage-keys';
 import { Trainer } from '../models/Trainer.models';
 
 @Injectable({
@@ -7,10 +9,17 @@ import { Trainer } from '../models/Trainer.models';
 export class TrainerServiceService {
   private _trainer?: Trainer;
 
-  get trainer(): Trainer | undefined {
-    return  this._trainer;
 
+  constructor() {
+    this._trainer = StorageUtil.storageRead<Trainer>(StorageKeys.Trainer);
   }
-
-  constructor() { }
+    get trainer(): Trainer | undefined {
+    return  this._trainer;
+  }
+ // setter 
+  // skal aldri gjøres om brukeren er undefined gjennom ! 
+  set trainer(pokemonTrainer: Trainer | undefined) {
+    StorageUtil.storageSave<Trainer>(StorageKeys.Trainer, pokemonTrainer!);
+    this._trainer = pokemonTrainer;
+  }
 }
