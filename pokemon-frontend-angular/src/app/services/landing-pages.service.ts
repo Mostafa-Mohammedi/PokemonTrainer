@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { map, switchMap } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
-import { Trainer } from '../models/Trainer.models';
+import { Trainer } from '../models/trainer.models';
 import { environment } from 'src/environments/environment';
 
 

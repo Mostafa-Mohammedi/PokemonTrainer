@@ -1,7 +1,7 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, Input } from '@angular/core';
 import { Pokemon } from 'src/app/models/pokemon.models';
-import { Trainer } from 'src/app/models/Trainer.models';
+import { Trainer } from 'src/app/models/trainer.models';
 import { TrainerPageService } from 'src/app/services/trainer-page.service';
 import { TrainerServiceService } from 'src/app/services/trainer-service.service';
 
