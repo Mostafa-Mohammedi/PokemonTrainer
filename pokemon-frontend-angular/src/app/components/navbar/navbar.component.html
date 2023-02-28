@@ -1,1 +1,17 @@
 <p>navbar works!</p>
+<nav class="bg-yellow-500 flex justify-between items-center sticky top-0 w-full mb-3">
+    <h2>Navigation</h2>
+    <ng-container *ngIf="trainer !== undefined">
+        <ul class="flex flex-row p-3">
+            <ng-container *ngIf="trainer === undefined">
+                <li class="pr-4"><a routerLink="" routerLinkActive="active" ariaCurrentWhenActive="page">Landing
+                        Page</a>
+                </li>
+            </ng-container>
+            <li class="pr-4"><a routerLink="/trainerPage" routerLinkActive="active"
+                    ariaCurrentWhenActive="page">trainerPage</a></li>
+            <li class="pr-4"><a routerLink="/pokemonCatalogue" routerLinkActive="active"
+                    ariaCurrentWhenActive="page">pokemonCatalogue</a></li>
+        </ul>
+    </ng-container>
+</nav>
