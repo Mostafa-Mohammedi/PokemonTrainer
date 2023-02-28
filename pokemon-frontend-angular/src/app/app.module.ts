@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { LandingPageFormComponent } from './components/landing-page-form/landing-page-form.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -10,6 +9,7 @@ import { PokemonButtonComponent } from './components/pokemon-button/pokemon-butt
 import { TrainerPagePages } from './pages/trainer-page/trainer-page.pages';
 import { PokemonCataloguePages } from './pages/pokemon-catalogue/pokemon-catalogue.pages';
 import { LandingPagePages } from './pages/landing-page/landing-page.pages';
+import { AppRoutingModule } from 'src/app.routing.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,8 @@ import { LandingPagePages } from './pages/landing-page/landing-page.pages';
     LandingPagePages
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Trainer } from 'src/app/models/Trainer.models';
+import { TrainerServiceService } from 'src/app/services/trainer-service.service';
 
 @Component({
   selector: 'app-navbar',
@@ -6,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
+
+  get trainer(): Trainer | undefined{
+
+    return this.trainerService.trainer; 
+  }
+  constructor(
+    private readonly trainerService: TrainerServiceService
+  ){}
 
 }
