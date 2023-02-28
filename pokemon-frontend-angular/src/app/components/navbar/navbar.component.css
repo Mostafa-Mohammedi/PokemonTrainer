@@ -1,0 +1,23 @@
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.nav-ul-container{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    text-decoration: none;
+    margin: 5px 10px;
+    
+}
+
+.nav-li-container{
+    padding: 0px 20px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}

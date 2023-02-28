@@ -28,17 +28,15 @@ export class TrainerServiceService {
    // console.log(this._trainer);
     if (this._trainer) {
 
-       let sjekk =  Boolean(this._trainer?.pokemon.find((pokemon: Pokemon) => {
+       return Boolean(this._trainer?.pokemon.find(pokemon => {
         console.log("pokemon fra listen:  ", pokemon.name)
         console.log("pokemon fra metoden:  ", pokemonName)
 
 
-        pokemon.name == pokemonName
+        return pokemon.name == pokemonName
       }
       ));
 
-      console.log(sjekk);
-      return sjekk;
     }
     console.log("teeeeeeee")
     return false;

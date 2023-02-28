@@ -1,16 +1,14 @@
-<p>landing-page-form works!</p>
 <!-- lager er two way binding ngModel -->
-
-<form #loginForm="ngForm" (ngSubmit)="loginSubmit(loginForm)" class="">
-    <fieldset class="border-solid border-black">
-        <label class="block" for="username"> Username</label>
-        <input class="border border-slate-300 p-2 m-2 rounded"
-         placeholder="brukernavnet..." 
+<form #loginForm="ngForm" (ngSubmit)="loginSubmit(loginForm)" class="landing-page-form-container">
+    <fieldset class="landing-page-fieldset">
+        <label class="landing-page-label-container" for="username"> Name</label>
+        <input class="landing-page-form-input-container"
+         placeholder="navne..." 
          type="text"
          ngModel 
          #username=""ngModel
          name="username" 
          id="username">
     </fieldset>
-    <button type="submit"  class="bg-red-600 p-2 rounded">Login</button>
+    <button type="submit"  class="landing-page-form-button-container">Login</button>
 </form>
