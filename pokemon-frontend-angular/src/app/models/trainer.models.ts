@@ -1,4 +1,4 @@
-import { Pokemon } from "./pokemon.models";
+import { Pokemon } from 'src/app/models/pokemon.models';
 
 export interface Trainer {
     id: number;

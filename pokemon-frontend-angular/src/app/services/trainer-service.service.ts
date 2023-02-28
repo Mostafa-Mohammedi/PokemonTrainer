@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { StorageUtil } from 'src/utils/storage.utils';
 import { StorageKeys } from '../enum/storage-keys';
-import { Pokemon } from '../models/pokemon.models';
-import { Trainer } from '../models/Trainer.models';
+import { Pokemon } from "../models/pokemon.models";
+import { Trainer } from '../models/trainer.models';
+
 
 @Injectable({
   providedIn: 'root'

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Trainer } from 'src/app/models/Trainer.models';
+import { Trainer } from 'src/app/models/trainer.models';
 import { TrainerServiceService } from 'src/app/services/trainer-service.service';
 
 @Component({
