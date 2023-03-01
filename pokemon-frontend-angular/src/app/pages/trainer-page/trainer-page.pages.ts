@@ -8,6 +8,7 @@ import { TrainerServiceService } from 'src/app/services/trainer-service.service'
   templateUrl: './trainer-page.pages.html',
   styleUrls: ['./trainer-page.pages.css']
 })
+
 export class TrainerPagePages {
   constructor(
     private readonly trainerService: TrainerServiceService
@@ -20,6 +21,23 @@ export class TrainerPagePages {
   get caughtPokemon(): Pokemon[] {
     if(this.trainerService.trainer){
       console.log(this.trainerService.trainer.pokemon)
+      return this.trainerService.trainer.pokemon;
+    }
+    return [];
+  }
+
+  constructor(
+    private readonly trainerService: TrainerServiceService
+  ){}
+
+  get trainer(): Trainer | undefined {
+    return this.trainerService.trainer;
+
+  }
+
+  get caughtPokemon(): Pokemon[] {
+    if(this.trainerService.trainer){
+      console.log(this.trainerService.trainer.pokemon);
       return this.trainerService.trainer.pokemon;
     }
     return [];
