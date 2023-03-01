@@ -42,4 +42,17 @@ export class TrainerServiceService {
     return false;
 
   }
+
+  public addToFavourites(newPokemon: Pokemon): void {
+    if (this._trainer) {
+      this._trainer.pokemon.push(newPokemon)
+    }
+  }
+
+  public removeFromFavourites(pokemonName: string): void {
+    if (this._trainer) {
+      this._trainer.pokemon.filter((pokemon: Pokemon) => pokemon.name !== pokemonName)
+    }
+
+  }
 }

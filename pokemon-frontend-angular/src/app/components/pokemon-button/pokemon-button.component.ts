@@ -37,10 +37,10 @@ export class PokemonButtonComponent {
 
   onTrainerCatch(): void {
     console.log("sjekke om den faktisk er true: ",this.isTakenPokemon)
-    if (this.isTakenPokemon) {
-      alert("This pokemon is already in your favorites.");
-      return;
-    }
+    // if (this.isTakenPokemon) {
+    //   alert("This pokemon is already in your favorites.");
+    //   return;
+    // }
 
     console.log(this.pokemonName);
     console.log(this.pokemon);
