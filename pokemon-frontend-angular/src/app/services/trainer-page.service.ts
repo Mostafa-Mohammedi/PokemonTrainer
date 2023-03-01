@@ -43,7 +43,7 @@ export class TrainerPageService {
     if(this.trainerService.inFavouritePokemon(pokemonName)){
       //throw new Error("addToPokemonTrainer pokemon already in favorites.")
       console.log("ttttttttttttttttt")
-      this.trainerService.removeFromFavourites(pokemonName);
+      trainer.pokemon = this.trainerService.removeFromFavourites(pokemonName);
     } else {
       //TODO: LEGG TIL HER
       this.trainerService.addToFavourites(pokemon)

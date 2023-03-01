@@ -52,14 +52,7 @@ export class TrainerServiceService {
   public removeFromFavourites(pokemonName: string): Pokemon[] {
     console.log("sjekker om pokemon trainer er valgt" ,this._trainer)
     if (this._trainer) {
-      const arr = this._trainer.pokemon.filter((pokemon: Pokemon) => 
-      
-      {
-        console.log("sjekk om pokemon navnet matcher ", pokemon.name != pokemonName)
-        return pokemon.name != pokemonName
-      
-      
-      })
+      const arr = this._trainer.pokemon.filter((pokemon: Pokemon) => pokemon.name != pokemonName)
       console.log("arrrrr",arr)
       return arr;
     }
