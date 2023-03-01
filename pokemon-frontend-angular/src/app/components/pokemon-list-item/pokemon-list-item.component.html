@@ -1,7 +1,5 @@
 <li class="pokemon-list-item-container" *ngIf="pokemon">
     <span>{{pokemon.name}}</span>
     <img [src]="pokemon.image" alt="{{pokemon.name}}"/>
-    <app-pokemon-button class="" [pokemonimage]="pokemon.image" [pokemon]="pokemon" [pokemonName]="pokemon.name">
-        ekstra
-    </app-pokemon-button>
+    <app-pokemon-button class="" [pokemonimage]="pokemon.image" [pokemon]="pokemon" [pokemonName]="pokemon.name"/>
 </li>

@@ -16,5 +16,4 @@ export class NavbarComponent {
   constructor(
     private readonly trainerService: TrainerServiceService
   ){}
-
 }

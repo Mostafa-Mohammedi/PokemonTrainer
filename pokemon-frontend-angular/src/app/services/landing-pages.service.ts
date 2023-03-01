@@ -29,7 +29,6 @@ export class LandingPagesService {
       )
   }
 
-  
   // check if user exist 
   private checkTrainer(username: string): Observable<Trainer | undefined>{
     return this.http.get<Trainer[]>(`${apiTrainer}?username=${username}`)
@@ -44,9 +43,7 @@ export class LandingPagesService {
       username,
       pokemon: []
     };
-
     // legger inn API key
-
     const headers = new HttpHeaders({
       "Content-Type": "application/json",
       "x-api-key": apiKey

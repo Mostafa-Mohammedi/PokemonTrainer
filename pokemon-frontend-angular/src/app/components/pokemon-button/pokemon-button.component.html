@@ -1,15 +1,6 @@
-<!-- <section class="pokemon-button-container">
-    <button (click)="onTrainerCatch()" type="button">pokemon</button>
-    <ng-container class="pokemon-button-ng-container" *ngIf="isTakenPokemon; then favourite else notFavourite"/>
-    <ng-template #favourite><img class="pokemon-button-img-container" src="assets/img/open.png"/></ng-template>
-    <ng-template #notFavourite><img class="pokemon-button-img-container" src="assets/img/closed.png"/></ng-template>
-  </section>
-   -->
-
-   <section class="pokemon-button-container">
-    <button (click)="onTrainerCatch()" type="button">{{ buttonText }}</button>
-    <ng-container class="pokemon-button-ng-container" *ngIf="isTakenPokemon; then favourite else notFavourite"/>
-    <ng-template #favourite><img class="pokemon-button-img-container" src="assets/img/open.png"/></ng-template>
-    <ng-template #notFavourite><img class="pokemon-button-img-container" src="assets/img/closed.png"/></ng-template>
-  </section>
-  
+<section class="pokemon-button-container">
+  <button (click)="onTrainerCatch()" type="button">{{ buttonText }}</button>
+  <ng-container class="pokemon-button-ng-container" *ngIf="isTakenPokemon; then favourite else notFavourite" />
+  <ng-template #favourite><img class="pokemon-button-img-container" src="assets/img/open.png" /></ng-template>
+  <ng-template #notFavourite><img class="pokemon-button-img-container" src="assets/img/closed.png" /></ng-template>
+</section>
