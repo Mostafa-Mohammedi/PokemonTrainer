@@ -8,6 +8,4 @@ import { Pokemon } from 'src/app/models/pokemon.models';
 })
 export class PokemonListItemComponent {
   @Input() pokemon?: Pokemon;
-
-
 }

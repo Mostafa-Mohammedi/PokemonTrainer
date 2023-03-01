@@ -20,7 +20,6 @@ export class LandingPageFormComponent {
 
     loginSubmit(loginForm: NgForm): void {
       const { username } = loginForm.value;
-      console.log(username);
       this.landingPageService.login(username).subscribe({
         next: (trainer: Trainer) => {
           this.trainerService.trainer = trainer;

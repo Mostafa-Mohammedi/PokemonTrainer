@@ -16,7 +16,6 @@ const { apiKey, apiTrainer } = environment
 export class TrainerPageService {
   private _loading: boolean = false;
 
-
   constructor(
     private http: HttpClient,
     private readonly pokemonCatalogueService: PokemonCatalogueService,
@@ -37,15 +36,11 @@ export class TrainerPageService {
     const pokemon: Pokemon |undefined = this.pokemonCatalogueService.pokemonByName(pokemonName);
 
     if (!pokemon) {
-      //TODO: her klikker det
       throw new Error("addToPokemonTrainer pokemon doesnt exist")
     }
     if(this.trainerService.inFavouritePokemon(pokemonName)){
-      //throw new Error("addToPokemonTrainer pokemon already in favorites.")
-      console.log("ttttttttttttttttt")
       trainer.pokemon = this.trainerService.removeFromFavourites(pokemonName);
     } else {
-      //TODO: LEGG TIL HER
       this.trainerService.addToFavourites(pokemon)
 
     }
@@ -59,7 +54,6 @@ export class TrainerPageService {
 
     console.log("pokemon elementene i arrayet ", trainer.pokemon)
     return this.http.patch<Trainer>(`${apiTrainer}/${trainer.id}`, {
-      //TODO: oppdater via denne
       pokemon: [...trainer.pokemon]
       
     }, {
@@ -73,8 +67,5 @@ export class TrainerPageService {
 
       })
     );
-
   }
-
-  
 }
