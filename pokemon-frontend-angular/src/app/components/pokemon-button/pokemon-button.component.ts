@@ -13,6 +13,7 @@ import { TrainerServiceService } from 'src/app/services/trainer-service.service'
 export class PokemonButtonComponent {
   
   public isTakenPokemon: boolean = false;
+  public buttonText = ''
 
   @Input() pokemonName: string = "";
   @Input() pokemon?: Pokemon;
@@ -28,6 +29,7 @@ export class PokemonButtonComponent {
  //   console.log("pooooooo ",this.pokemonName)
   //  console.log("sheeeeeeeee" ,this.trainerService.inFavouritePokemon(this.pokemonName))
     this.isTakenPokemon = this.trainerService.inFavouritePokemon(this.pokemonName)
+    this.toggleButton(this.isTakenPokemon)
     
 
   }
@@ -45,16 +47,27 @@ export class PokemonButtonComponent {
 //    console.log(this.pokemonName);
 //    console.log(this.pokemon);
  //   console.log(this.pokemonimage);
-  
+
+    
+      
     this.trainerPageService.addToPokemonTrainer(this.pokemonName).subscribe({
       next: (trainer: Trainer) => {
         this.isTakenPokemon = this.trainerService.inFavouritePokemon(this.pokemonName);
         //console.log("response: ", trainer)
+        this.toggleButton(this.isTakenPokemon)
       }, 
       error: (error: HttpErrorResponse) => {
         console.log(error.message)
       }
     })
+  }
+
+  toggleButton(pokemonTaken: boolean): void {
+    if (pokemonTaken) {
+      this.buttonText = 'Release pokemon';
+    } else {
+      this.buttonText = 'Catch pokemon';
+    }
   }
   
 
