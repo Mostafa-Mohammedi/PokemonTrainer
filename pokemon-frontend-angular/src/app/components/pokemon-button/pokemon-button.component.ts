@@ -25,8 +25,8 @@ export class PokemonButtonComponent {
 
   ngOnInit(): void {
     //this.isTakenPokemon = true;
-    console.log("pooooooo ",this.pokemonName)
-    console.log("sheeeeeeeee" ,this.trainerService.inFavouritePokemon(this.pokemonName))
+ //   console.log("pooooooo ",this.pokemonName)
+  //  console.log("sheeeeeeeee" ,this.trainerService.inFavouritePokemon(this.pokemonName))
     this.isTakenPokemon = this.trainerService.inFavouritePokemon(this.pokemonName)
     
 
@@ -36,15 +36,15 @@ export class PokemonButtonComponent {
 
 
   onTrainerCatch(): void {
-    console.log("sjekke om den faktisk er true: ",this.isTakenPokemon)
-    if (this.isTakenPokemon) {
-      alert("This pokemon is already in your favorites.");
-      return;
-    }
+//    console.log("sjekke om den faktisk er true: ",this.isTakenPokemon)
+    // if (this.isTakenPokemon) {
+    //   alert("This pokemon is already in your favorites.");
+    //   return;
+    // }
 
-    console.log(this.pokemonName);
-    console.log(this.pokemon);
-    console.log(this.pokemonimage);
+//    console.log(this.pokemonName);
+//    console.log(this.pokemon);
+ //   console.log(this.pokemonimage);
   
     this.trainerPageService.addToPokemonTrainer(this.pokemonName).subscribe({
       next: (trainer: Trainer) => {
