@@ -1,27 +1,25 @@
 # PokemonFrontendAngular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.
+## Description
+This is a Pokemon Trainer web application built in the [Angular framework](https://angular.io/).
 
-## Development server
+## Installation
+Clone the repository to run it locally on your machine. To get started, run `npm install` to install the necessary dependencies, and then `npm start` to run the application on your localhost.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+If you want to use our [Pokémon Trainer API](https://github.com/dewald-els/noroff-assignment-api), which is hosted on [glitch.com](glitch.com), you can follow the instructions provided in the API repository to set it up. In order to use the API with our application, you will need to add your own API key to `environment.ts` and `environment.development.ts`.
 
-## Code scaffolding
+## Usage
+You can try the application out live [here](https://pokemon-trainer-rho.vercel.app/).
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Landing Page
+To log in, enter a username of your choice. If a user with that username already exists, you will be logged in automatically. However, if no user is found with the entered username, a new user account will be created for you. The username can contain any characters you like, so feel free to choose one that's easy for you to remember.
 
-## Build
+### Trainer Page
+This section displays the Pokémons that you have caught. You can release a Pokémon and remove it from your collection by pressing the **Release pokemon** button.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Pokémon Catalogue Page
+This section displays 1000 Pokémons from the Pokémon Trainer API. You can catch them by pressing the **Catch pokemon** button, and release them by pressing the **Release pokemon** button.
 
-## Running unit tests
+## Components
+![Components](components.png)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
