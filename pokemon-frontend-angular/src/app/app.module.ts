@@ -10,6 +10,8 @@ import { TrainerPagePages } from './pages/trainer-page/trainer-page.pages';
 import { PokemonCataloguePages } from './pages/pokemon-catalogue/pokemon-catalogue.pages';
 import { LandingPagePages } from './pages/landing-page/landing-page.pages';
 import { AppRoutingModule } from 'src/app.routing.module';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,8 +26,10 @@ import { AppRoutingModule } from 'src/app.routing.module';
     LandingPagePages
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

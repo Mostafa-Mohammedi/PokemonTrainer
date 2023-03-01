@@ -24,18 +24,19 @@ export class PokemonButtonComponent {
   ){}
 
   ngOnInit(): void {
+    //this.isTakenPokemon = true;
+    console.log("pooooooo ",this.pokemonName)
+    console.log("sheeeeeeeee" ,this.trainerService.inFavouritePokemon(this.pokemonName))
     this.isTakenPokemon = this.trainerService.inFavouritePokemon(this.pokemonName)
     
 
   }
 
 
-  get loading(): boolean{
-    return this.trainerPageService.loading;
-  }
 
 
   onTrainerCatch(): void {
+    console.log("sjekke om den faktisk er true: ",this.isTakenPokemon)
     if (this.isTakenPokemon) {
       alert("This pokemon is already in your favorites.");
       return;
@@ -48,7 +49,7 @@ export class PokemonButtonComponent {
     this.trainerPageService.addToPokemonTrainer(this.pokemonName).subscribe({
       next: (trainer: Trainer) => {
         this.isTakenPokemon = this.trainerService.inFavouritePokemon(this.pokemonName);
-        console.log("response: ", trainer)
+        //console.log("response: ", trainer)
       }, 
       error: (error: HttpErrorResponse) => {
         console.log(error.message)

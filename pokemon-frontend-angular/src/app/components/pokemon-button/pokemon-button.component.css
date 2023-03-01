@@ -1,0 +1,14 @@
+.pokemon-button-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pokemon-button-span-container{
+    margin: 20px;
+}
+.pokemon-button-img-container{
+    width: 20px;
+    margin-top: 20px;
+}
+ 
