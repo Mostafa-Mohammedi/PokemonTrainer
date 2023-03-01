@@ -29,8 +29,8 @@ export class TrainerServiceService {
     if (this._trainer) {
 
        return Boolean(this._trainer?.pokemon.find(pokemon => {
-        console.log("pokemon fra listen:  ", pokemon.name)
-        console.log("pokemon fra metoden:  ", pokemonName)
+     //   console.log("pokemon fra listen:  ", pokemon.name)
+      //  console.log("pokemon fra metoden:  ", pokemonName)
 
 
         return pokemon.name == pokemonName
@@ -49,10 +49,22 @@ export class TrainerServiceService {
     }
   }
 
-  public removeFromFavourites(pokemonName: string): void {
+  public removeFromFavourites(pokemonName: string): Pokemon[] {
+    console.log("sjekker om pokemon trainer er valgt" ,this._trainer)
     if (this._trainer) {
-      this._trainer.pokemon.filter((pokemon: Pokemon) => pokemon.name !== pokemonName)
+      const arr = this._trainer.pokemon.filter((pokemon: Pokemon) => 
+      
+      {
+        console.log("sjekk om pokemon navnet matcher ", pokemon.name != pokemonName)
+        return pokemon.name != pokemonName
+      
+      
+      })
+      console.log("arrrrr",arr)
+      return arr;
     }
+    return [];
+
 
   }
 }

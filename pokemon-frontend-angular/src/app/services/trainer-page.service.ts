@@ -42,6 +42,7 @@ export class TrainerPageService {
     }
     if(this.trainerService.inFavouritePokemon(pokemonName)){
       //throw new Error("addToPokemonTrainer pokemon already in favorites.")
+      console.log("ttttttttttttttttt")
       this.trainerService.removeFromFavourites(pokemonName);
     } else {
       //TODO: LEGG TIL HER
@@ -55,6 +56,8 @@ export class TrainerPageService {
       'content-type' : 'application/json',
       'x-api-key' : apiKey
     })
+
+    console.log("pokemon elementene i arrayet ", trainer.pokemon)
     return this.http.patch<Trainer>(`${apiTrainer}/${trainer.id}`, {
       //TODO: oppdater via denne
       pokemon: [...trainer.pokemon]
