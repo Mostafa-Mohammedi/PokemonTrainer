@@ -23,3 +23,7 @@ This section displays 1000 Pokémons from the Pokémon Trainer API. You can catc
 ## Components
 ![Components](components.png)
 
+## Contributors
+* Mostafa Mohammedi [@Mostafa-Mohammedi](https://github.com/Mostafa-Mohammedi)
+* Marie Havre [@mariehavre](https://github.com/mariehavre)
+
