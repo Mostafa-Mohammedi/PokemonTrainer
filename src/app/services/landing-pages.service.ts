@@ -11,12 +11,17 @@ const {apiTrainer, apiKey} = environment;
 @Injectable({
   providedIn: 'root'
 })
+
+
 export class LandingPagesService {
 
   constructor(private readonly http: HttpClient) { }
 
-  // Models, observable and RxJS operators 
-  // login 
+ /**
+  * Log in a trainer by username.
+  * @param {string} username The username of the trainer to log in.
+  * @returns {Observable<Trainer>} An observable that emits the trainer after logging in.
+  */
   public login(username: string): Observable<Trainer>{
     return this.checkTrainer(username)
       .pipe(
@@ -28,8 +33,11 @@ export class LandingPagesService {
         })
       )
   }
-
-  // check if user exist 
+   /**
+   * Check if a trainer with the given username exists.
+   * @param {string} username The username of the trainer to check.
+   * @returns {Observable<Trainer | undefined>} An observable that emits the trainer if it exists, otherwise undefined.
+   */
   private checkTrainer(username: string): Observable<Trainer | undefined>{
     return this.http.get<Trainer[]>(`${apiTrainer}?username=${username}`)
   .pipe(map((response: Trainer[]) => {
@@ -38,6 +46,11 @@ export class LandingPagesService {
   }))
   };
 
+   /**
+   * Create a new trainer with the given username.
+   * @param {string} username The username of the new trainer.
+   * @returns {Observable<Trainer>} An observable that emits the new trainer after creating it.
+   */
   private createTrainer(username: string): Observable<Trainer>{
     const trainer = {
       username,

@@ -10,6 +10,11 @@ const { apiPokemon, pokemonImages } = environment;
 @Injectable({
   providedIn: 'root'
 })
+
+/**
+ * service that provides functionality for fetching and working with Pokemon data.
+*/
+
 export class PokemonCatalogueService {
 
   private _pokemon: Pokemon[] = [];
@@ -34,6 +39,10 @@ export class PokemonCatalogueService {
     return `${pokemonImages}/${id}.png`;
   }
 
+  /**
+   * Retrieves an array of all Pokemon objects from the API and assigns them to the _pokemon property.
+   * Sets the image property of each Pokemon object to the URL of the corresponding image.
+*/
   public findAllPokemon(): void {
     this._loading = true;
     this.http.get<Pokemon[]>(apiPokemon)
@@ -59,6 +68,12 @@ export class PokemonCatalogueService {
       }
     })
   }
+
+  /**
+   * Returns the Pokemon object with the specified name, if it exists in the _pokemon array.
+   * @param {string} name - The name of the Pokemon object to retrieve.
+
+*/
 
   public pokemonByName(name: string): Pokemon | undefined {
     return this._pokemon.find((pokemon: Pokemon) => pokemon.name === name )

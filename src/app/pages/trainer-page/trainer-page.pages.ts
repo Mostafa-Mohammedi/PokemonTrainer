@@ -19,7 +19,6 @@ export class TrainerPagePages {
   }
   get caughtPokemon(): Pokemon[] {
     if(this.trainerService.trainer){
-      console.log(this.trainerService.trainer.pokemon)
       return this.trainerService.trainer.pokemon;
     }
     return [];

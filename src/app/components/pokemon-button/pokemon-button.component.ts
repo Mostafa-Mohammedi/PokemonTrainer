@@ -29,6 +29,10 @@ export class PokemonButtonComponent {
     this.toggleButton(this.isTakenPokemon)
 
   }
+  /**
+   * Calls the addToPokemonTrainer method of trainerPageService to add the current pokemon to the trainer's collection.
+   * Updates the isTakenPokemon flag based on whether the pokemon is already in the collection.
+   */
 
   onTrainerCatch(): void {
 
